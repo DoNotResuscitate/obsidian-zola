@@ -305,36 +305,39 @@ class Settings:
         "ROOT_SECTION_NAME": "main",
         "GRAPH_OPTIONS": """
         {
-        	nodes: {
-        		shape: "dot",
-        		color: isDark() ? "#8c8e91" : "#dee2e6",
-        		font: {
-        			face: "Inter",
-        			color: isDark() ? "#c9cdd1" : "#616469",
-        			strokeColor: isDark() ? "#c9cdd1" : "#616469",
-        		},
-        		scaling: {
-        			label: {
-        				enabled: true,
-        			},
-        		},
-        	},
-        	edges: {
-        		color: { inherit: "both" },
-        		width: 0.8,
-        		smooth: {
-        			type: "continuous",
-        		},
-        		hoverWidth: 4,
-        	},
-        	interaction: {
-        		hover: true,
-        	},
-        	height: "100%",
-        	width: "100%",
-        	physics: {
-        		solver: "repulsion",
-        	},
+            autoResize: true,
+            nodes: {
+                shape: "dot",
+                color: isDark() ? "#8c8e91" : "#dee2e6",
+                font: {
+                    face: "Inter",
+                    color: isDark() ? "#c9cdd1" : "#616469",
+                    strokeColor: isDark() ? "#c9cdd1" : "#616469",
+                },
+                scaling: {
+                    label: {
+                        enabled: true,
+                    },
+                },
+            },
+            edges: {
+                color: { inherit: "both" },
+                width: 0.8,
+                smooth: {
+                    type: "continuous",
+                roundness: 1
+                },
+                hoverWidth: 4,
+            },
+            interaction: {
+                hover: true,
+            },
+            height: "100%",
+            width: "100%",
+            physics: {
+                solver: "forceAtlas2Based",
+                stabilization: false
+            },
         }
         """,
     }
