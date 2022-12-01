@@ -33,9 +33,6 @@
                                 </ul>
                             </div>
                         {% endif %}
-                        {% for page in subsection.pages %}                           
-                            <li><a class="docs-link{% if current_url == page.permalink %} active{% endif %}" href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></li>
-                        {% endfor %}
                         {% if subsubsection.subsections %}
                             <h4 class="collapsible-section"> {{ subsubsection.extra.sidebar | safe }} </h4>
                             <div class="collapsible-wrapper">
@@ -52,9 +49,6 @@
                                             </ul>
                                         </div>
                                     {% endif %}
-                                    {% for page in subsection.pages %}                           
-                                        <li><a class="docs-link{% if current_url == page.permalink %} active{% endif %}" href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></li>
-                                    {% endfor %}
                                     {% if subsubsection.subsections %}
                                         <h6 class="collapsible-section">{{ subsubsubsection.extra.sidebar | safe }}</h6>
                                         <div class="collapsible-wrapper">
@@ -70,10 +64,6 @@
                                                         {% endfor %}
                                                         </ul>
                                                     </div>
-                                                {% endif %}
-                                                {% for page in subsection.pages %}                           
-                                                    <li><a class="docs-link{% if current_url == page.permalink %} active{% endif %}" href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></li>
-                                                {% endfor %}
                                             {% endfor %}
                                             </ul>
                                         </div>
