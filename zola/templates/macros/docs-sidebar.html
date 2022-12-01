@@ -49,21 +49,22 @@
                                             </ul>
                                         </div>
                                     {% endif %}
-                                    {% if subsubsection.subsections %}
+                                    {% if subsubsubsection.subsections %}
                                         <h6 class="collapsible-section">{{ subsubsubsection.extra.sidebar | safe }}</h6>
                                         <div class="collapsible-wrapper">
                                             <ul class="list-unstyled">
-                                            {% for s in subsubsection.subsections %}
-                                            {% set subsubsubsection = get_section(path=s) %}
-                                                {% if subsubsubsection.pages %}
-                                                    <h6 class="collapsible-section">{{ subsubsubsection.extra.sidebar | safe }}</h6>
+                                            {% for s in subsubsubsection.subsections %}
+                                            {% set subsubsubsubsection = get_section(path=s) %}
+                                                {% if subsubsubsubsection.pages %}
+                                                    <h6 class="collapsible-section">{{ subsubsubsubsection.extra.sidebar | safe }}</h6>
                                                     <div class="collapsible-wrapper">
                                                         <ul class="list-unstyled">
-                                                        {% for page in subsubsubsection.pages %}                           
+                                                        {% for page in subsubsubsubsection.pages %}                           
                                                             <li><a class="docs-link{% if current_url == page.permalink %} active{% endif %}" href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></li>
                                                         {% endfor %}
                                                         </ul>
                                                     </div>
+                                                {% endif %}
                                             {% endfor %}
                                             </ul>
                                         </div>
