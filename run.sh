@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pip install python-slugify
-wget -q -O - \
+sudo wget -q -O - \
 "https://github.com/getzola/zola/releases/download/v0.15.2/zola-v0.15.2-x86_64-unknown-linux-gnu.tar.gz" \
 | tar xzf - -C /usr/local/bin
 
